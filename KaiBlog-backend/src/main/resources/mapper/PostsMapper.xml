@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hycgy.kaiblogbackend.mapper.PostsMapper">
+
+    <resultMap id="BaseResultMap" type="com.hycgy.kaiblogbackend.domain.Posts">
+            <id property="postId" column="post_id" jdbcType="INTEGER"/>
+            <result property="authorId" column="author_id" jdbcType="INTEGER"/>
+            <result property="title" column="title" jdbcType="VARCHAR"/>
+            <result property="slug" column="slug" jdbcType="VARCHAR"/>
+            <result property="content" column="content" jdbcType="VARCHAR"/>
+            <result property="excerpt" column="excerpt" jdbcType="VARCHAR"/>
+            <result property="status" column="status" jdbcType="OTHER"/>
+            <result property="createdAt" column="created_at" jdbcType="TIMESTAMP"/>
+            <result property="updatedAt" column="updated_at" jdbcType="TIMESTAMP"/>
+            <result property="publishedAt" column="published_at" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        post_id,author_id,title,
+        slug,content,excerpt,
+        status,created_at,updated_at,
+        published_at
+    </sql>
+</mapper>
